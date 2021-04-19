@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56C8A089-5335-4BA5-B7E5-BDA670ECEA51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sinergia_ERP.My.MyApplication</StartupObject>
+    <RootNamespace>Sinergia_ERP</RootNamespace>
+    <AssemblyName>Sinergia_ERP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sinergia_ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sinergia_ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIDC">
+      <HintPath>..\..\..\Documents\UI_DesignControls\UIDC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexion\ClsConnection.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="negocio\ClsArea.vb" />
+    <Compile Include="negocio\ClsCandidatos.vb" />
+    <Compile Include="negocio\ClsCapacitaciones.vb" />
+    <Compile Include="negocio\ClsContratos.vb" />
+    <Compile Include="negocio\ClsDepartamento.vb" />
+    <Compile Include="negocio\ClsDetalleCapacitaciones.vb" />
+    <Compile Include="negocio\ClsEmpleados.vb" />
+    <Compile Include="negocio\ClsHorarios.vb" />
+    <Compile Include="negocio\ClsPermisos.vb" />
+    <Compile Include="negocio\ClsProfesion.vb" />
+    <Compile Include="negocio\ClsPuestoTrabajo.vb" />
+    <Compile Include="negocio\ClsSucursal.vb" />
+    <Compile Include="negocio\ClsTipoPermiso.vb" />
+    <Compile Include="negocio\ClsVacaciones.vb" />
+    <Compile Include="negocio\ModulosVarios.vb" />
+    <Compile Include="presentacion\CT_AgregarCliente.Designer.vb">
+      <DependentUpon>CT_AgregarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarCuenta.Designer.vb">
+      <DependentUpon>CT_AgregarCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarProveedores.Designer.vb">
+      <DependentUpon>CT_AgregarProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_Clientes.Designer.vb">
+      <DependentUpon>CT_Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_CuentaPorCobrar.Designer.vb">
+      <DependentUpon>CT_CuentaPorCobrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_CuentaPorCobrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_Cuentas.Designer.vb">
+      <DependentUpon>CT_Cuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_Cuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_CuentasPorPagar.Designer.vb">
+      <DependentUpon>CT_CuentasPorPagar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_CuentasPorPagar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_Proveedores.Designer.vb">
+      <DependentUpon>CT_Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\MenuPrincipal.Designer.vb">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Area.Designer.vb">
+      <DependentUpon>RH_Area.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Area.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_BuscarCapacitaciones.Designer.vb">
+      <DependentUpon>RH_BuscarCapacitaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_BuscarCapacitaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_BuscarEmpleados.Designer.vb">
+      <DependentUpon>RH_BuscarEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_BuscarEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Candidatos.Designer.vb">
+      <DependentUpon>RH_Candidatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Candidatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Capacitaciones.Designer.vb">
+      <DependentUpon>RH_Capacitaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Capacitaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Contratos.Designer.vb">
+      <DependentUpon>RH_Contratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Contratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Departamentos.Designer.vb">
+      <DependentUpon>RH_Departamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Departamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Empleados.Designer.vb">
+      <DependentUpon>RH_Empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Horarios.Designer.vb">
+      <DependentUpon>RH_Horarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Horarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoDepartamentos.Designer.vb">
+      <DependentUpon>RH_ListadoDepartamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoDepartamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoEmpleados.Designer.vb">
+      <DependentUpon>RH_ListadoEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoPuestoTrabajo.Designer.vb">
+      <DependentUpon>RH_ListadoPuestoTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_ListadoPuestoTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Permisos.Designer.vb">
+      <DependentUpon>RH_Permisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Permisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Profesion.Designer.vb">
+      <DependentUpon>RH_Profesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Profesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_PuestoTrabajo.Designer.vb">
+      <DependentUpon>RH_PuestoTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_PuestoTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Sucursal.Designer.vb">
+      <DependentUpon>RH_Sucursal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Sucursal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_TipoPermiso.Designer.vb">
+      <DependentUpon>RH_TipoPermiso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_TipoPermiso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\RH_Vacaciones.Designer.vb">
+      <DependentUpon>RH_Vacaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\RH_Vacaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_AgregarCliente.resx">
+      <DependentUpon>CT_AgregarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_AgregarCuenta.resx">
+      <DependentUpon>CT_AgregarCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_AgregarProveedores.resx">
+      <DependentUpon>CT_AgregarProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_Clientes.resx">
+      <DependentUpon>CT_Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_CuentaPorCobrar.resx">
+      <DependentUpon>CT_CuentaPorCobrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_Cuentas.resx">
+      <DependentUpon>CT_Cuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_CuentasPorPagar.resx">
+      <DependentUpon>CT_CuentasPorPagar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_Proveedores.resx">
+      <DependentUpon>CT_Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Area.resx">
+      <DependentUpon>RH_Area.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_BuscarCapacitaciones.resx">
+      <DependentUpon>RH_BuscarCapacitaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_BuscarEmpleados.resx">
+      <DependentUpon>RH_BuscarEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Candidatos.resx">
+      <DependentUpon>RH_Candidatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Capacitaciones.resx">
+      <DependentUpon>RH_Capacitaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Contratos.resx">
+      <DependentUpon>RH_Contratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Departamentos.resx">
+      <DependentUpon>RH_Departamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Empleados.resx">
+      <DependentUpon>RH_Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Horarios.resx">
+      <DependentUpon>RH_Horarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_ListadoDepartamentos.resx">
+      <DependentUpon>RH_ListadoDepartamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_ListadoEmpleados.resx">
+      <DependentUpon>RH_ListadoEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_ListadoPuestoTrabajo.resx">
+      <DependentUpon>RH_ListadoPuestoTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Permisos.resx">
+      <DependentUpon>RH_Permisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Profesion.resx">
+      <DependentUpon>RH_Profesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_PuestoTrabajo.resx">
+      <DependentUpon>RH_PuestoTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Sucursal.resx">
+      <DependentUpon>RH_Sucursal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_TipoPermiso.resx">
+      <DependentUpon>RH_TipoPermiso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\RH_Vacaciones.resx">
+      <DependentUpon>RH_Vacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="reportes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
