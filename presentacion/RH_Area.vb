@@ -6,6 +6,7 @@
         End If
     End Sub
     Private Sub M_Area_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'LLENADO TABLA
         Dim objArea As New ClsArea
         Dim dv As DataView = objArea.SeleccionarArea.DefaultView
