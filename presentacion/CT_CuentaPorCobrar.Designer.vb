@@ -67,6 +67,8 @@ Partial Class CT_CuentaPorCobrar
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblmsj = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +89,7 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(9, 60)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(918, 101)
+        Me.GroupBox1.Size = New System.Drawing.Size(1030, 75)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Cliente"
@@ -97,7 +99,7 @@ Partial Class CT_CuentaPorCobrar
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(602, 55)
+        Me.Button2.Location = New System.Drawing.Point(840, 29)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(97, 23)
         Me.Button2.TabIndex = 4
@@ -106,7 +108,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(148, 57)
+        Me.txtNombre.Location = New System.Drawing.Point(386, 31)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(448, 20)
         Me.txtNombre.TabIndex = 3
@@ -114,7 +116,7 @@ Partial Class CT_CuentaPorCobrar
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(48, 60)
+        Me.Label2.Location = New System.Drawing.Point(286, 34)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 13)
         Me.Label2.TabIndex = 2
@@ -122,7 +124,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(148, 31)
+        Me.txtId.Location = New System.Drawing.Point(180, 31)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 1
@@ -130,7 +132,7 @@ Partial Class CT_CuentaPorCobrar
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(77, 34)
+        Me.Label1.Location = New System.Drawing.Point(109, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 0
@@ -146,7 +148,7 @@ Partial Class CT_CuentaPorCobrar
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(945, 56)
+        Me.Panel1.Size = New System.Drawing.Size(1057, 56)
         Me.Panel1.TabIndex = 6
         '
         'btnSalir
@@ -154,7 +156,7 @@ Partial Class CT_CuentaPorCobrar
         Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
         Me.btnSalir.ImageActive = Nothing
-        Me.btnSalir.Location = New System.Drawing.Point(901, 6)
+        Me.btnSalir.Location = New System.Drawing.Point(1013, 6)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(35, 46)
@@ -176,6 +178,8 @@ Partial Class CT_CuentaPorCobrar
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.txtFactura)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Button1)
@@ -190,16 +194,16 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox2.Controls.Add(Me.cbxTipoMov)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(9, 167)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 141)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(918, 85)
+        Me.GroupBox2.Size = New System.Drawing.Size(1030, 85)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Agregar Movimiento Contable"
         '
         'txtFactura
         '
-        Me.txtFactura.Location = New System.Drawing.Point(136, 44)
+        Me.txtFactura.Location = New System.Drawing.Point(123, 44)
         Me.txtFactura.Name = "txtFactura"
         Me.txtFactura.Size = New System.Drawing.Size(131, 20)
         Me.txtFactura.TabIndex = 14
@@ -207,7 +211,7 @@ Partial Class CT_CuentaPorCobrar
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(133, 28)
+        Me.Label10.Location = New System.Drawing.Point(120, 28)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(61, 13)
         Me.Label10.TabIndex = 13
@@ -219,7 +223,7 @@ Partial Class CT_CuentaPorCobrar
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(873, 37)
+        Me.Button1.Location = New System.Drawing.Point(983, 38)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(35, 29)
         Me.Button1.TabIndex = 12
@@ -229,7 +233,7 @@ Partial Class CT_CuentaPorCobrar
         '
         Me.cbxTerminoPa.FormattingEnabled = True
         Me.cbxTerminoPa.Items.AddRange(New Object() {"15 Días", "30 Días"})
-        Me.cbxTerminoPa.Location = New System.Drawing.Point(746, 43)
+        Me.cbxTerminoPa.Location = New System.Drawing.Point(733, 43)
         Me.cbxTerminoPa.Name = "cbxTerminoPa"
         Me.cbxTerminoPa.Size = New System.Drawing.Size(121, 21)
         Me.cbxTerminoPa.TabIndex = 11
@@ -237,7 +241,7 @@ Partial Class CT_CuentaPorCobrar
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(743, 27)
+        Me.Label7.Location = New System.Drawing.Point(730, 27)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(73, 13)
         Me.Label7.TabIndex = 10
@@ -245,7 +249,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtCredito
         '
-        Me.txtCredito.Location = New System.Drawing.Point(623, 44)
+        Me.txtCredito.Location = New System.Drawing.Point(610, 44)
         Me.txtCredito.Name = "txtCredito"
         Me.txtCredito.Size = New System.Drawing.Size(117, 20)
         Me.txtCredito.TabIndex = 9
@@ -253,7 +257,7 @@ Partial Class CT_CuentaPorCobrar
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(620, 28)
+        Me.Label6.Location = New System.Drawing.Point(607, 28)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 13)
         Me.Label6.TabIndex = 8
@@ -261,7 +265,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtDebito
         '
-        Me.txtDebito.Location = New System.Drawing.Point(500, 44)
+        Me.txtDebito.Location = New System.Drawing.Point(487, 44)
         Me.txtDebito.Name = "txtDebito"
         Me.txtDebito.Size = New System.Drawing.Size(117, 20)
         Me.txtDebito.TabIndex = 7
@@ -269,7 +273,7 @@ Partial Class CT_CuentaPorCobrar
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(497, 28)
+        Me.Label5.Location = New System.Drawing.Point(484, 28)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
         Me.Label5.TabIndex = 6
@@ -277,7 +281,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(273, 44)
+        Me.txtDescripcion.Location = New System.Drawing.Point(260, 44)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(221, 20)
         Me.txtDescripcion.TabIndex = 5
@@ -285,7 +289,7 @@ Partial Class CT_CuentaPorCobrar
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(270, 28)
+        Me.Label4.Location = New System.Drawing.Point(257, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 4
@@ -297,7 +301,7 @@ Partial Class CT_CuentaPorCobrar
         Me.cbxTipoMov.Items.AddRange(New Object() {"Factura", "Abono", "Anticipo"})
         Me.cbxTipoMov.Location = New System.Drawing.Point(9, 43)
         Me.cbxTipoMov.Name = "cbxTipoMov"
-        Me.cbxTipoMov.Size = New System.Drawing.Size(121, 21)
+        Me.cbxTipoMov.Size = New System.Drawing.Size(109, 21)
         Me.cbxTipoMov.TabIndex = 5
         '
         'Label3
@@ -317,16 +321,16 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.dgvDetalleCliente)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 258)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 232)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(919, 307)
+        Me.GroupBox3.Size = New System.Drawing.Size(1031, 307)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Movimientos Contables"
         '
         'txtSaldo
         '
-        Me.txtSaldo.Location = New System.Drawing.Point(720, 22)
+        Me.txtSaldo.Location = New System.Drawing.Point(832, 19)
         Me.txtSaldo.Name = "txtSaldo"
         Me.txtSaldo.Size = New System.Drawing.Size(193, 20)
         Me.txtSaldo.TabIndex = 16
@@ -334,7 +338,7 @@ Partial Class CT_CuentaPorCobrar
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(653, 25)
+        Me.Label9.Location = New System.Drawing.Point(765, 22)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(61, 13)
         Me.Label9.TabIndex = 15
@@ -342,7 +346,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(52, 26)
+        Me.txtBuscar.Location = New System.Drawing.Point(79, 22)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(221, 20)
         Me.txtBuscar.TabIndex = 14
@@ -350,11 +354,11 @@ Partial Class CT_CuentaPorCobrar
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(7, 29)
+        Me.Label8.Location = New System.Drawing.Point(15, 25)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 13)
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
         Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Buscar "
+        Me.Label8.Text = "Descripción"
         '
         'dgvDetalleCliente
         '
@@ -367,14 +371,14 @@ Partial Class CT_CuentaPorCobrar
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvDetalleCliente.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDetalleCliente.Location = New System.Drawing.Point(4, 52)
         Me.dgvDetalleCliente.Name = "dgvDetalleCliente"
-        Me.dgvDetalleCliente.Size = New System.Drawing.Size(909, 249)
+        Me.dgvDetalleCliente.Size = New System.Drawing.Size(1021, 249)
         Me.dgvDetalleCliente.TabIndex = 0
         '
         'id_DetalleCliente
@@ -449,7 +453,7 @@ Partial Class CT_CuentaPorCobrar
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblmsj})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 568)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(939, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1051, 22)
         Me.StatusStrip1.TabIndex = 8
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -460,12 +464,29 @@ Partial Class CT_CuentaPorCobrar
         Me.lblmsj.Size = New System.Drawing.Size(16, 17)
         Me.lblmsj.Text = "..."
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(857, 27)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(37, 13)
+        Me.Label11.TabIndex = 15
+        Me.Label11.Text = "Fecha"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(860, 43)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(107, 20)
+        Me.DateTimePicker1.TabIndex = 9
+        '
         'CT_CuentaPorCobrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(939, 590)
+        Me.ClientSize = New System.Drawing.Size(1051, 590)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -533,4 +554,6 @@ Partial Class CT_CuentaPorCobrar
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewButtonColumn
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label11 As Label
 End Class
