@@ -79,4 +79,24 @@
 
     End Sub
 
+    Private Sub dgvData_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvData.CellDoubleClick
+        Try
+            txtID.Text = dgvData.Rows(e.RowIndex).Cells(0).Value
+            txtNombre.Text = dgvData.Rows(e.RowIndex).Cells(1).Value
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+
+        Try
+            MODIFICAR()
+            LIMPIAR()
+            CARGARDATA()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
