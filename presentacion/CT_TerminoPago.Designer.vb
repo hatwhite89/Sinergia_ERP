@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CT_Proveedores
+Partial Class CT_TerminoPago
     Inherits System.Windows.Forms.Form
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,18 +14,18 @@ Partial Class CT_Proveedores
         End Try
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CT_Proveedores))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CT_TerminoPago))
         Me.gbxbusqueda = New System.Windows.Forms.GroupBox()
-        Me.txtNombreB = New UIDC.UI_UserLoginTextBox()
+        Me.txtDescripcionB = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial2 = New UIDC.UI_LabelMaterial()
         Me.lblfila = New System.Windows.Forms.Label()
         Me.dgbtabla = New System.Windows.Forms.DataGridView()
@@ -51,7 +51,7 @@ Partial Class CT_Proveedores
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gbxbusqueda.BackColor = System.Drawing.Color.Transparent
-        Me.gbxbusqueda.Controls.Add(Me.txtNombreB)
+        Me.gbxbusqueda.Controls.Add(Me.txtDescripcionB)
         Me.gbxbusqueda.Controls.Add(Me.UI_LabelMaterial2)
         Me.gbxbusqueda.Controls.Add(Me.lblfila)
         Me.gbxbusqueda.Controls.Add(Me.dgbtabla)
@@ -59,32 +59,32 @@ Partial Class CT_Proveedores
         Me.gbxbusqueda.Controls.Add(Me.lblcantidad)
         Me.gbxbusqueda.Controls.Add(Me.lbltotal)
         Me.gbxbusqueda.ForeColor = System.Drawing.Color.White
-        Me.gbxbusqueda.Location = New System.Drawing.Point(15, 73)
+        Me.gbxbusqueda.Location = New System.Drawing.Point(14, 74)
         Me.gbxbusqueda.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbxbusqueda.Name = "gbxbusqueda"
         Me.gbxbusqueda.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbxbusqueda.Size = New System.Drawing.Size(1037, 423)
-        Me.gbxbusqueda.TabIndex = 130
+        Me.gbxbusqueda.TabIndex = 132
         Me.gbxbusqueda.TabStop = False
-        Me.gbxbusqueda.Text = "BUSCAR PROVEEDOR"
+        Me.gbxbusqueda.Text = "BUSCAR TERMINOS DE PAGOS"
         '
-        'txtNombreB
+        'txtDescripcionB
         '
-        Me.txtNombreB.BackColor = System.Drawing.Color.Transparent
-        Me.txtNombreB.BackgroundColour = System.Drawing.Color.White
-        Me.txtNombreB.Borde = False
-        Me.txtNombreB.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.txtNombreB.BorderSize = 3
-        Me.txtNombreB.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.txtNombreB.Location = New System.Drawing.Point(96, 30)
-        Me.txtNombreB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtNombreB.Name = "txtNombreB"
-        Me.txtNombreB.Radio = 12
-        Me.txtNombreB.Size = New System.Drawing.Size(509, 34)
-        Me.txtNombreB.TabIndex = 126
-        Me.txtNombreB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.txtNombreB.UseSystemPasswordChar = False
-        Me.txtNombreB.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtDescripcionB.BackColor = System.Drawing.Color.Transparent
+        Me.txtDescripcionB.BackgroundColour = System.Drawing.Color.White
+        Me.txtDescripcionB.Borde = False
+        Me.txtDescripcionB.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtDescripcionB.BorderSize = 3
+        Me.txtDescripcionB.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtDescripcionB.Location = New System.Drawing.Point(130, 30)
+        Me.txtDescripcionB.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtDescripcionB.Name = "txtDescripcionB"
+        Me.txtDescripcionB.Radio = 12
+        Me.txtDescripcionB.Size = New System.Drawing.Size(509, 34)
+        Me.txtDescripcionB.TabIndex = 126
+        Me.txtDescripcionB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtDescripcionB.UseSystemPasswordChar = False
+        Me.txtDescripcionB.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial2
         '
@@ -94,9 +94,9 @@ Partial Class CT_Proveedores
         Me.UI_LabelMaterial2.ForeColor = System.Drawing.Color.White
         Me.UI_LabelMaterial2.Location = New System.Drawing.Point(13, 36)
         Me.UI_LabelMaterial2.Name = "UI_LabelMaterial2"
-        Me.UI_LabelMaterial2.Size = New System.Drawing.Size(68, 20)
+        Me.UI_LabelMaterial2.Size = New System.Drawing.Size(99, 20)
         Me.UI_LabelMaterial2.TabIndex = 125
-        Me.UI_LabelMaterial2.Text = "Nombre"
+        Me.UI_LabelMaterial2.Text = "Descripción"
         '
         'lblfila
         '
@@ -171,11 +171,11 @@ Partial Class CT_Proveedores
         Me.Panel1.Controls.Add(Me.btnnuevo)
         Me.Panel1.Controls.Add(Me.btnSalir)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(0, -1)
+        Me.Panel1.Location = New System.Drawing.Point(-1, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1069, 69)
-        Me.Panel1.TabIndex = 129
+        Me.Panel1.TabIndex = 131
         '
         'btnnuevo
         '
@@ -221,14 +221,14 @@ Partial Class CT_Proveedores
         'lblForm
         '
         Me.lblForm.AutoSize = True
-        Me.lblForm.Location = New System.Drawing.Point(527, 42)
+        Me.lblForm.Location = New System.Drawing.Point(489, 41)
         Me.lblForm.Name = "lblForm"
         Me.lblForm.Size = New System.Drawing.Size(51, 17)
         Me.lblForm.TabIndex = 18
         Me.lblForm.Text = "Label1"
         Me.lblForm.Visible = False
         '
-        'CT_Proveedores
+        'CT_TerminoPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -236,9 +236,9 @@ Partial Class CT_Proveedores
         Me.ClientSize = New System.Drawing.Size(1067, 510)
         Me.Controls.Add(Me.gbxbusqueda)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "CT_Proveedores"
-        Me.Text = "Proveedores"
+        Me.KeyPreview = True
+        Me.Name = "CT_TerminoPago"
+        Me.Text = "ClsTerminoPago"
         Me.gbxbusqueda.ResumeLayout(False)
         Me.gbxbusqueda.PerformLayout()
         CType(Me.dgbtabla, System.ComponentModel.ISupportInitialize).EndInit()
@@ -252,7 +252,7 @@ Partial Class CT_Proveedores
     End Sub
 
     Friend WithEvents gbxbusqueda As GroupBox
-    Friend WithEvents txtNombreB As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtDescripcionB As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial2 As UIDC.UI_LabelMaterial
     Friend WithEvents lblfila As Label
     Friend WithEvents dgbtabla As DataGridView

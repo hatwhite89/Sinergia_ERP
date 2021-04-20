@@ -59,7 +59,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="UIDC">
-      <HintPath>..\..\..\Documents\UIDC.dll</HintPath>
+      <HintPath>..\..\..\Downloads\UIDC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -110,11 +110,19 @@
     <Compile Include="negocio\ClsHorarios.vb" />
     <Compile Include="negocio\ClsPermisos.vb" />
     <Compile Include="negocio\ClsProfesion.vb" />
+    <Compile Include="negocio\ClsProveedor.vb" />
     <Compile Include="negocio\ClsPuestoTrabajo.vb" />
     <Compile Include="negocio\ClsSucursal.vb" />
+    <Compile Include="negocio\ClsTerminoPago.vb" />
     <Compile Include="negocio\ClsTipoPermiso.vb" />
     <Compile Include="negocio\ClsVacaciones.vb" />
     <Compile Include="negocio\ModulosVarios.vb" />
+    <Compile Include="presentacion\CT_TerminoPago.Designer.vb">
+      <DependentUpon>CT_TerminoPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_TerminoPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="presentacion\CT_AgregarCliente.Designer.vb">
       <DependentUpon>CT_AgregarCliente.vb</DependentUpon>
     </Compile>
@@ -161,6 +169,12 @@
       <DependentUpon>CT_Proveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="presentacion\CT_Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarTerminoPago.Designer.vb">
+      <DependentUpon>CT_AgregarTerminoPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_AgregarTerminoPago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\MenuPrincipal.Designer.vb">
@@ -311,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\CT_Proveedores.resx">
       <DependentUpon>CT_Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_AgregarTerminoPago.resx">
+      <DependentUpon>CT_AgregarTerminoPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_TerminoPago.resx">
+      <DependentUpon>CT_TerminoPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
