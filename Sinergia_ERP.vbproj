@@ -167,6 +167,12 @@
     <Compile Include="presentacion\CT_Proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="presentacion\CT_TipoMovimiento.Designer.vb">
+      <DependentUpon>CT_TipoMovimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\CT_TipoMovimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="presentacion\MenuPrincipal.Designer.vb">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\CT_Proveedores.resx">
       <DependentUpon>CT_Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\CT_TipoMovimiento.resx">
+      <DependentUpon>CT_TipoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.vb</DependentUpon>

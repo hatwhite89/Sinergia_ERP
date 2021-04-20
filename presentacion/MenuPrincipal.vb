@@ -10,6 +10,8 @@
         dgvOpciones.Rows.Add("Crear Cuentas")
         dgvOpciones.Rows.Add("Cuentas por Pagar")
         dgvOpciones.Rows.Add("Cuentas por Cobrar")
+        dgvOpciones.Rows.Add("Clientes")
+        dgvOpciones.Rows.Add("Tipo de Movimientos")
 
     End Sub
 
@@ -134,6 +136,10 @@
                 CT_CuentasPorPagar.Show()
             ElseIf SELECCION = "Cuentas por Cobrar" Then
                 CT_CuentaPorCobrar.Show()
+            ElseIf SELECCION = "Clientes" Then
+                CT_Clientes.Show()
+            ElseIf SELECCION = "Tipo de Movimientos" Then
+                CT_TipoMovimiento.Show()
             End If
 
         Catch ex As Exception
