@@ -109,6 +109,7 @@
     <Compile Include="negocio\ClsDetalleCapacitaciones.vb" />
     <Compile Include="negocio\ClsDetalleCliente_Proveedores.vb" />
     <Compile Include="negocio\ClsDetalleCliente_Transacciones.vb" />
+    <Compile Include="negocio\ClsDetalleMovimientos_Proveedor.vb" />
     <Compile Include="negocio\ClsEmpleados.vb" />
     <Compile Include="negocio\ClsHorarios.vb" />
     <Compile Include="negocio\ClsPermisos.vb" />
