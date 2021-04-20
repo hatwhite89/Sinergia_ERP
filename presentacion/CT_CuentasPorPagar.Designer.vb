@@ -33,7 +33,9 @@ Partial Class CT_CuentasPorPagar
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDetalleProveedor = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.cmbxTerminoPago = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtCredito = New System.Windows.Forms.TextBox()
@@ -60,6 +62,8 @@ Partial Class CT_CuentasPorPagar
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TerminoPagos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.StatusStrip1.SuspendLayout()
@@ -79,7 +83,7 @@ Partial Class CT_CuentasPorPagar
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 747)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1153, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1213, 26)
         Me.StatusStrip1.TabIndex = 13
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -105,7 +109,7 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(1131, 378)
+        Me.GroupBox3.Size = New System.Drawing.Size(1191, 378)
         Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Movimientos Contables"
@@ -113,7 +117,7 @@ Partial Class CT_CuentasPorPagar
         'txtSaldo
         '
         Me.txtSaldo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSaldo.Location = New System.Drawing.Point(865, 23)
+        Me.txtSaldo.Location = New System.Drawing.Point(925, 23)
         Me.txtSaldo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSaldo.Name = "txtSaldo"
         Me.txtSaldo.Size = New System.Drawing.Size(256, 22)
@@ -123,7 +127,7 @@ Partial Class CT_CuentasPorPagar
         '
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(776, 27)
+        Me.Label9.Location = New System.Drawing.Point(836, 27)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(80, 17)
@@ -157,7 +161,7 @@ Partial Class CT_CuentasPorPagar
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvDetalleProveedor.BackgroundColor = System.Drawing.Color.White
         Me.dgvDetalleProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.dgvDetalleProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.TerminoPagos, Me.Fecha, Me.Column7, Me.Column8})
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -170,7 +174,7 @@ Partial Class CT_CuentasPorPagar
         Me.dgvDetalleProveedor.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvDetalleProveedor.Name = "dgvDetalleProveedor"
         Me.dgvDetalleProveedor.RowHeadersWidth = 51
-        Me.dgvDetalleProveedor.Size = New System.Drawing.Size(1123, 306)
+        Me.dgvDetalleProveedor.Size = New System.Drawing.Size(1183, 306)
         Me.dgvDetalleProveedor.TabIndex = 0
         '
         'GroupBox2
@@ -178,7 +182,9 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.dtpFecha)
+        Me.GroupBox2.Controls.Add(Me.btnAgregar)
         Me.GroupBox2.Controls.Add(Me.cmbxTerminoPago)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtCredito)
@@ -194,23 +200,41 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(1129, 105)
+        Me.GroupBox2.Size = New System.Drawing.Size(1189, 105)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Agregar Movimiento Contable"
         '
-        'Button1
+        'Label10
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(985, 46)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(47, 36)
-        Me.Button1.TabIndex = 12
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(992, 32)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(47, 17)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Fecha"
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(983, 53)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(136, 22)
+        Me.dtpFecha.TabIndex = 13
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.BackColor = System.Drawing.Color.Transparent
+        Me.btnAgregar.BackgroundImage = CType(resources.GetObject("btnAgregar.BackgroundImage"), System.Drawing.Image)
+        Me.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAgregar.Location = New System.Drawing.Point(1133, 45)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(47, 36)
+        Me.btnAgregar.TabIndex = 12
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'cmbxTerminoPago
         '
@@ -314,7 +338,7 @@ Partial Class CT_CuentasPorPagar
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1161, 69)
+        Me.Panel1.Size = New System.Drawing.Size(1221, 69)
         Me.Panel1.TabIndex = 11
         '
         'btnSalir
@@ -322,7 +346,7 @@ Partial Class CT_CuentasPorPagar
         Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
         Me.btnSalir.ImageActive = Nothing
-        Me.btnSalir.Location = New System.Drawing.Point(1103, 7)
+        Me.btnSalir.Location = New System.Drawing.Point(1163, 7)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(47, 57)
@@ -358,7 +382,7 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1129, 124)
+        Me.GroupBox1.Size = New System.Drawing.Size(1189, 124)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Cliente"
@@ -430,6 +454,7 @@ Partial Class CT_CuentasPorPagar
         Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
         Me.id_DetalleCliente.MinimumWidth = 6
         Me.id_DetalleCliente.Name = "id_DetalleCliente"
+        Me.id_DetalleCliente.Visible = False
         Me.id_DetalleCliente.Width = 125
         '
         'Column1
@@ -465,7 +490,22 @@ Partial Class CT_CuentasPorPagar
         Me.Column6.HeaderText = "Term. Pago"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        Me.Column6.Visible = False
         Me.Column6.Width = 125
+        '
+        'TerminoPagos
+        '
+        Me.TerminoPagos.HeaderText = "Termino de Pago"
+        Me.TerminoPagos.MinimumWidth = 6
+        Me.TerminoPagos.Name = "TerminoPagos"
+        Me.TerminoPagos.Width = 125
+        '
+        'Fecha
+        '
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.MinimumWidth = 6
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.Width = 125
         '
         'Column7
         '
@@ -490,7 +530,7 @@ Partial Class CT_CuentasPorPagar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1153, 773)
+        Me.ClientSize = New System.Drawing.Size(1213, 773)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -526,7 +566,7 @@ Partial Class CT_CuentasPorPagar
     Friend WithEvents Label8 As Label
     Friend WithEvents dgvDetalleProveedor As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAgregar As Button
     Friend WithEvents cmbxTerminoPago As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtCredito As TextBox
@@ -547,12 +587,16 @@ Partial Class CT_CuentasPorPagar
     Friend WithEvents txtId As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents id_DetalleCliente As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents TerminoPagos As DataGridViewTextBoxColumn
+    Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewButtonColumn
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
 End Class
