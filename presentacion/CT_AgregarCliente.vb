@@ -26,12 +26,15 @@
         txtCelular.Text = ""
         txtEMAIL.Text = ""
         txtDireccion.Text = ""
+        dgvProveedores.Rows.Clear()
 
     End Sub
 
     Private Sub GUARDAR()
 
         Dim objCliente As New ClsCliente
+        Dim objDetalle As New ClsDetalleCliente_Proveedores
+        Dim codigoCliente As String
 
         If txtRTN.Text <> "" And txtNombre.Text <> "" Then
 
@@ -43,9 +46,23 @@
                 .E_MAIL = txtEMAIL.Text
                 .TEL_ = txtTEL.Text
                 .CEL_ = txtCelular.Text
+                codigoCliente = .RegistrarNuevoCliente
+                MsgBox(codigoCliente)
 
-                If .RegistrarNuevoCliente = 1 Then
+                If codigoCliente <> "" Then
+
+                    For i = 0 To dgvProveedores.Rows.Count - 2
+                        With objDetalle
+
+                            .ID_Cliente = Integer.Parse(codigoCliente)
+                            .ID_Proveedor = Integer.Parse(dgvProveedores.Rows(i).Cells(1).Value)
+                            .PORCENTAJE_ = Integer.Parse(dgvProveedores.Rows(i).Cells(3).Value)
+                            .RegistrarNuevoDetalle()
+                        End With
+                    Next
+
                     lblEstado.Text = "Se guardo el cliente exitosamente."
+
                 Else
                     lblEstado.Text = "Ocurrio un error al guardar."
 
@@ -61,6 +78,33 @@
     End Sub
 
     Private Sub CT_AgregarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
+            If txtID.Text <> "" Then
+
+                Dim objDetalle As New ClsDetalleCliente_Proveedores
+                Dim dt As New DataTable
+                Dim row As DataRow
+
+                With objDetalle
+
+                    .ID_Cliente = Integer.Parse(txtID.Text)
+                    dt = .ListarProveedoresXCliente
+
+                    For i = 0 To dt.Rows.Count - 1
+
+                        row = dt.Rows(i)
+
+                        dgvProveedores.Rows.Add(CStr(row("id")), CStr(row("id_proveedor")), CStr(row("nombre")), CStr(row("porcentaje")))
+
+                    Next
+
+                End With
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
