@@ -63,7 +63,7 @@ Partial Class CT_AgregarCuenta
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(588, 56)
+        Me.Panel1.Size = New System.Drawing.Size(590, 56)
         Me.Panel1.TabIndex = 7
         '
         'btnnuevo
@@ -71,7 +71,7 @@ Partial Class CT_AgregarCuenta
         Me.btnnuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnnuevo.Image = CType(resources.GetObject("btnnuevo.Image"), System.Drawing.Image)
         Me.btnnuevo.ImageActive = Nothing
-        Me.btnnuevo.Location = New System.Drawing.Point(372, 5)
+        Me.btnnuevo.Location = New System.Drawing.Point(374, 5)
         Me.btnnuevo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnnuevo.Name = "btnnuevo"
         Me.btnnuevo.Size = New System.Drawing.Size(35, 46)
@@ -85,7 +85,7 @@ Partial Class CT_AgregarCuenta
         Me.btnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
         Me.btnSalir.ImageActive = Nothing
-        Me.btnSalir.Location = New System.Drawing.Point(544, 6)
+        Me.btnSalir.Location = New System.Drawing.Point(546, 6)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(35, 46)
@@ -110,7 +110,7 @@ Partial Class CT_AgregarCuenta
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
         Me.btnModificar.ImageActive = Nothing
-        Me.btnModificar.Location = New System.Drawing.Point(458, 6)
+        Me.btnModificar.Location = New System.Drawing.Point(460, 6)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(35, 46)
@@ -124,7 +124,7 @@ Partial Class CT_AgregarCuenta
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageActive = Nothing
-        Me.btnCancelar.Location = New System.Drawing.Point(502, 6)
+        Me.btnCancelar.Location = New System.Drawing.Point(504, 6)
         Me.btnCancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(35, 46)
@@ -138,7 +138,7 @@ Partial Class CT_AgregarCuenta
         Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageActive = Nothing
-        Me.btnGuardar.Location = New System.Drawing.Point(416, 6)
+        Me.btnGuardar.Location = New System.Drawing.Point(418, 6)
         Me.btnGuardar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(35, 46)
@@ -297,7 +297,7 @@ Partial Class CT_AgregarCuenta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(584, 234)
+        Me.ClientSize = New System.Drawing.Size(586, 235)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "CT_AgregarCuenta"

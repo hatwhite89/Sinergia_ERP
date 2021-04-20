@@ -31,19 +31,19 @@ Partial Class CT_AgregarCliente
         Me.btnCancelar = New UIDC.UI_ButtonImage()
         Me.btnGuardar = New UIDC.UI_ButtonImage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.UI_UserLoginTextBox6 = New UIDC.UI_UserLoginTextBox()
+        Me.txtEMAIL = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial7 = New UIDC.UI_LabelMaterial()
-        Me.UI_UserLoginTextBox5 = New UIDC.UI_UserLoginTextBox()
+        Me.txtCelular = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial6 = New UIDC.UI_LabelMaterial()
-        Me.UI_UserLoginTextBox4 = New UIDC.UI_UserLoginTextBox()
+        Me.txtTEL = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial5 = New UIDC.UI_LabelMaterial()
-        Me.UI_UserLoginTextBox3 = New UIDC.UI_UserLoginTextBox()
+        Me.txtRTN = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial4 = New UIDC.UI_LabelMaterial()
-        Me.UI_UserLoginTextBox2 = New UIDC.UI_UserLoginTextBox()
+        Me.txtDireccion = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial3 = New UIDC.UI_LabelMaterial()
-        Me.UI_UserLoginTextBox1 = New UIDC.UI_UserLoginTextBox()
+        Me.txtNombre = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial2 = New UIDC.UI_LabelMaterial()
-        Me.txtCodigoB = New UIDC.UI_UserLoginTextBox()
+        Me.txtID = New UIDC.UI_UserLoginTextBox()
         Me.UI_LabelMaterial1 = New UIDC.UI_LabelMaterial()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -52,6 +52,7 @@ Partial Class CT_AgregarCliente
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblEstado = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.btnnuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +63,7 @@ Partial Class CT_AgregarCliente
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -164,19 +166,19 @@ Partial Class CT_AgregarCliente
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox6)
+        Me.GroupBox1.Controls.Add(Me.txtEMAIL)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial7)
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox5)
+        Me.GroupBox1.Controls.Add(Me.txtCelular)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial6)
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox4)
+        Me.GroupBox1.Controls.Add(Me.txtTEL)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial5)
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtRTN)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial4)
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox2)
+        Me.GroupBox1.Controls.Add(Me.txtDireccion)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial3)
-        Me.GroupBox1.Controls.Add(Me.UI_UserLoginTextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial2)
-        Me.GroupBox1.Controls.Add(Me.txtCodigoB)
+        Me.GroupBox1.Controls.Add(Me.txtID)
         Me.GroupBox1.Controls.Add(Me.UI_LabelMaterial1)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 60)
@@ -186,23 +188,23 @@ Partial Class CT_AgregarCliente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información de Cliente"
         '
-        'UI_UserLoginTextBox6
+        'txtEMAIL
         '
-        Me.UI_UserLoginTextBox6.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox6.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox6.Borde = False
-        Me.UI_UserLoginTextBox6.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox6.BorderSize = 3
-        Me.UI_UserLoginTextBox6.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox6.Location = New System.Drawing.Point(403, 143)
-        Me.UI_UserLoginTextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox6.Name = "UI_UserLoginTextBox6"
-        Me.UI_UserLoginTextBox6.Radio = 12
-        Me.UI_UserLoginTextBox6.Size = New System.Drawing.Size(205, 29)
-        Me.UI_UserLoginTextBox6.TabIndex = 183
-        Me.UI_UserLoginTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox6.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox6.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtEMAIL.BackColor = System.Drawing.Color.Transparent
+        Me.txtEMAIL.BackgroundColour = System.Drawing.Color.White
+        Me.txtEMAIL.Borde = False
+        Me.txtEMAIL.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtEMAIL.BorderSize = 3
+        Me.txtEMAIL.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtEMAIL.Location = New System.Drawing.Point(403, 143)
+        Me.txtEMAIL.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEMAIL.Name = "txtEMAIL"
+        Me.txtEMAIL.Radio = 12
+        Me.txtEMAIL.Size = New System.Drawing.Size(205, 29)
+        Me.txtEMAIL.TabIndex = 183
+        Me.txtEMAIL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtEMAIL.UseSystemPasswordChar = False
+        Me.txtEMAIL.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial7
         '
@@ -217,23 +219,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial7.TabIndex = 182
         Me.UI_LabelMaterial7.Text = "E-mail"
         '
-        'UI_UserLoginTextBox5
+        'txtCelular
         '
-        Me.UI_UserLoginTextBox5.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox5.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox5.Borde = False
-        Me.UI_UserLoginTextBox5.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox5.BorderSize = 3
-        Me.UI_UserLoginTextBox5.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox5.Location = New System.Drawing.Point(403, 89)
-        Me.UI_UserLoginTextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox5.Name = "UI_UserLoginTextBox5"
-        Me.UI_UserLoginTextBox5.Radio = 12
-        Me.UI_UserLoginTextBox5.Size = New System.Drawing.Size(205, 29)
-        Me.UI_UserLoginTextBox5.TabIndex = 181
-        Me.UI_UserLoginTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox5.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox5.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtCelular.BackColor = System.Drawing.Color.Transparent
+        Me.txtCelular.BackgroundColour = System.Drawing.Color.White
+        Me.txtCelular.Borde = False
+        Me.txtCelular.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtCelular.BorderSize = 3
+        Me.txtCelular.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtCelular.Location = New System.Drawing.Point(403, 89)
+        Me.txtCelular.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCelular.Name = "txtCelular"
+        Me.txtCelular.Radio = 12
+        Me.txtCelular.Size = New System.Drawing.Size(205, 29)
+        Me.txtCelular.TabIndex = 181
+        Me.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtCelular.UseSystemPasswordChar = False
+        Me.txtCelular.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial6
         '
@@ -248,23 +250,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial6.TabIndex = 180
         Me.UI_LabelMaterial6.Text = "Celular"
         '
-        'UI_UserLoginTextBox4
+        'txtTEL
         '
-        Me.UI_UserLoginTextBox4.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox4.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox4.Borde = False
-        Me.UI_UserLoginTextBox4.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox4.BorderSize = 3
-        Me.UI_UserLoginTextBox4.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox4.Location = New System.Drawing.Point(403, 39)
-        Me.UI_UserLoginTextBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox4.Name = "UI_UserLoginTextBox4"
-        Me.UI_UserLoginTextBox4.Radio = 12
-        Me.UI_UserLoginTextBox4.Size = New System.Drawing.Size(205, 29)
-        Me.UI_UserLoginTextBox4.TabIndex = 179
-        Me.UI_UserLoginTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox4.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox4.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtTEL.BackColor = System.Drawing.Color.Transparent
+        Me.txtTEL.BackgroundColour = System.Drawing.Color.White
+        Me.txtTEL.Borde = False
+        Me.txtTEL.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtTEL.BorderSize = 3
+        Me.txtTEL.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtTEL.Location = New System.Drawing.Point(403, 39)
+        Me.txtTEL.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTEL.Name = "txtTEL"
+        Me.txtTEL.Radio = 12
+        Me.txtTEL.Size = New System.Drawing.Size(205, 29)
+        Me.txtTEL.TabIndex = 179
+        Me.txtTEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtTEL.UseSystemPasswordChar = False
+        Me.txtTEL.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial5
         '
@@ -279,23 +281,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial5.TabIndex = 178
         Me.UI_LabelMaterial5.Text = "Telefono"
         '
-        'UI_UserLoginTextBox3
+        'txtRTN
         '
-        Me.UI_UserLoginTextBox3.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox3.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox3.Borde = False
-        Me.UI_UserLoginTextBox3.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox3.BorderSize = 3
-        Me.UI_UserLoginTextBox3.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox3.Location = New System.Drawing.Point(176, 39)
-        Me.UI_UserLoginTextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox3.Name = "UI_UserLoginTextBox3"
-        Me.UI_UserLoginTextBox3.Radio = 12
-        Me.UI_UserLoginTextBox3.Size = New System.Drawing.Size(205, 29)
-        Me.UI_UserLoginTextBox3.TabIndex = 177
-        Me.UI_UserLoginTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox3.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox3.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtRTN.BackColor = System.Drawing.Color.Transparent
+        Me.txtRTN.BackgroundColour = System.Drawing.Color.White
+        Me.txtRTN.Borde = False
+        Me.txtRTN.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtRTN.BorderSize = 3
+        Me.txtRTN.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtRTN.Location = New System.Drawing.Point(176, 39)
+        Me.txtRTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRTN.Name = "txtRTN"
+        Me.txtRTN.Radio = 12
+        Me.txtRTN.Size = New System.Drawing.Size(205, 29)
+        Me.txtRTN.TabIndex = 177
+        Me.txtRTN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtRTN.UseSystemPasswordChar = False
+        Me.txtRTN.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial4
         '
@@ -310,23 +312,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial4.TabIndex = 176
         Me.UI_LabelMaterial4.Text = "RTN"
         '
-        'UI_UserLoginTextBox2
+        'txtDireccion
         '
-        Me.UI_UserLoginTextBox2.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox2.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox2.Borde = False
-        Me.UI_UserLoginTextBox2.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox2.BorderSize = 3
-        Me.UI_UserLoginTextBox2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox2.Location = New System.Drawing.Point(25, 143)
-        Me.UI_UserLoginTextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox2.Name = "UI_UserLoginTextBox2"
-        Me.UI_UserLoginTextBox2.Radio = 12
-        Me.UI_UserLoginTextBox2.Size = New System.Drawing.Size(356, 29)
-        Me.UI_UserLoginTextBox2.TabIndex = 130
-        Me.UI_UserLoginTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox2.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox2.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtDireccion.BackColor = System.Drawing.Color.Transparent
+        Me.txtDireccion.BackgroundColour = System.Drawing.Color.White
+        Me.txtDireccion.Borde = False
+        Me.txtDireccion.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtDireccion.BorderSize = 3
+        Me.txtDireccion.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtDireccion.Location = New System.Drawing.Point(25, 143)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Radio = 12
+        Me.txtDireccion.Size = New System.Drawing.Size(356, 29)
+        Me.txtDireccion.TabIndex = 130
+        Me.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtDireccion.UseSystemPasswordChar = False
+        Me.txtDireccion.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial3
         '
@@ -341,23 +343,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial3.TabIndex = 129
         Me.UI_LabelMaterial3.Text = "Dirección"
         '
-        'UI_UserLoginTextBox1
+        'txtNombre
         '
-        Me.UI_UserLoginTextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.UI_UserLoginTextBox1.BackgroundColour = System.Drawing.Color.White
-        Me.UI_UserLoginTextBox1.Borde = False
-        Me.UI_UserLoginTextBox1.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.UI_UserLoginTextBox1.BorderSize = 3
-        Me.UI_UserLoginTextBox1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.UI_UserLoginTextBox1.Location = New System.Drawing.Point(24, 89)
-        Me.UI_UserLoginTextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.UI_UserLoginTextBox1.Name = "UI_UserLoginTextBox1"
-        Me.UI_UserLoginTextBox1.Radio = 12
-        Me.UI_UserLoginTextBox1.Size = New System.Drawing.Size(357, 29)
-        Me.UI_UserLoginTextBox1.TabIndex = 128
-        Me.UI_UserLoginTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.UI_UserLoginTextBox1.UseSystemPasswordChar = False
-        Me.UI_UserLoginTextBox1.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtNombre.BackColor = System.Drawing.Color.Transparent
+        Me.txtNombre.BackgroundColour = System.Drawing.Color.White
+        Me.txtNombre.Borde = False
+        Me.txtNombre.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtNombre.BorderSize = 3
+        Me.txtNombre.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtNombre.Location = New System.Drawing.Point(24, 89)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Radio = 12
+        Me.txtNombre.Size = New System.Drawing.Size(357, 29)
+        Me.txtNombre.TabIndex = 128
+        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtNombre.UseSystemPasswordChar = False
+        Me.txtNombre.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial2
         '
@@ -372,23 +374,23 @@ Partial Class CT_AgregarCliente
         Me.UI_LabelMaterial2.TabIndex = 127
         Me.UI_LabelMaterial2.Text = "Nombre"
         '
-        'txtCodigoB
+        'txtID
         '
-        Me.txtCodigoB.BackColor = System.Drawing.Color.Transparent
-        Me.txtCodigoB.BackgroundColour = System.Drawing.Color.White
-        Me.txtCodigoB.Borde = False
-        Me.txtCodigoB.BorderColour = System.Drawing.Color.DodgerBlue
-        Me.txtCodigoB.BorderSize = 3
-        Me.txtCodigoB.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.txtCodigoB.Location = New System.Drawing.Point(24, 39)
-        Me.txtCodigoB.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtCodigoB.Name = "txtCodigoB"
-        Me.txtCodigoB.Radio = 12
-        Me.txtCodigoB.Size = New System.Drawing.Size(109, 29)
-        Me.txtCodigoB.TabIndex = 126
-        Me.txtCodigoB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.txtCodigoB.UseSystemPasswordChar = False
-        Me.txtCodigoB.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
+        Me.txtID.BackColor = System.Drawing.Color.Transparent
+        Me.txtID.BackgroundColour = System.Drawing.Color.White
+        Me.txtID.Borde = False
+        Me.txtID.BorderColour = System.Drawing.Color.DodgerBlue
+        Me.txtID.BorderSize = 3
+        Me.txtID.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.txtID.Location = New System.Drawing.Point(24, 39)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Radio = 12
+        Me.txtID.Size = New System.Drawing.Size(109, 29)
+        Me.txtID.TabIndex = 126
+        Me.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtID.UseSystemPasswordChar = False
+        Me.txtID.VisualImage = UIDC.UI_UserLoginTextBox.Visual.Suprimir
         '
         'UI_LabelMaterial1
         '
@@ -449,11 +451,18 @@ Partial Class CT_AgregarCliente
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblEstado})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 520)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(655, 22)
         Me.StatusStrip1.TabIndex = 11
         Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblEstado
+        '
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(16, 17)
+        Me.lblEstado.Text = "..."
         '
         'CT_AgregarCliente
         '
@@ -478,6 +487,8 @@ Partial Class CT_AgregarCliente
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -491,19 +502,19 @@ Partial Class CT_AgregarCliente
     Friend WithEvents btnCancelar As UIDC.UI_ButtonImage
     Friend WithEvents btnGuardar As UIDC.UI_ButtonImage
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents UI_UserLoginTextBox6 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtEMAIL As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial7 As UIDC.UI_LabelMaterial
-    Friend WithEvents UI_UserLoginTextBox5 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtCelular As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial6 As UIDC.UI_LabelMaterial
-    Friend WithEvents UI_UserLoginTextBox4 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtTEL As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial5 As UIDC.UI_LabelMaterial
-    Friend WithEvents UI_UserLoginTextBox3 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtRTN As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial4 As UIDC.UI_LabelMaterial
-    Friend WithEvents UI_UserLoginTextBox2 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtDireccion As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial3 As UIDC.UI_LabelMaterial
-    Friend WithEvents UI_UserLoginTextBox1 As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtNombre As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial2 As UIDC.UI_LabelMaterial
-    Friend WithEvents txtCodigoB As UIDC.UI_UserLoginTextBox
+    Friend WithEvents txtID As UIDC.UI_UserLoginTextBox
     Friend WithEvents UI_LabelMaterial1 As UIDC.UI_LabelMaterial
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
@@ -512,4 +523,5 @@ Partial Class CT_AgregarCliente
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents lblEstado As ToolStripStatusLabel
 End Class

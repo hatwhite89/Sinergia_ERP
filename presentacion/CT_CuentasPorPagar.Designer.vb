@@ -97,7 +97,7 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(8, 258)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(848, 307)
+        Me.GroupBox3.Size = New System.Drawing.Size(848, 345)
         Me.GroupBox3.TabIndex = 12
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Movimientos Contables"
@@ -122,7 +122,7 @@ Partial Class CT_CuentasPorPagar
         '
         Me.txtBuscar.Location = New System.Drawing.Point(52, 26)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(221, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(195, 20)
         Me.txtBuscar.TabIndex = 14
         '
         'Label8
@@ -143,7 +143,7 @@ Partial Class CT_CuentasPorPagar
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DataGridView1.Location = New System.Drawing.Point(4, 52)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(842, 249)
+        Me.DataGridView1.Size = New System.Drawing.Size(842, 287)
         Me.DataGridView1.TabIndex = 0
         '
         'id_DetalleCliente

@@ -55,11 +55,13 @@ Partial Class CT_CuentaPorCobrar
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDetalleCliente = New System.Windows.Forms.DataGridView()
         Me.id_DetalleCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -361,11 +363,11 @@ Partial Class CT_CuentaPorCobrar
         Me.dgvDetalleCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvDetalleCliente.BackgroundColor = System.Drawing.Color.White
         Me.dgvDetalleCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.dgvDetalleCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column10, Me.Column6, Me.Column7, Me.Column8})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
@@ -380,6 +382,11 @@ Partial Class CT_CuentaPorCobrar
         Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
         Me.id_DetalleCliente.Name = "id_DetalleCliente"
         Me.id_DetalleCliente.Visible = False
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "codMovimiento"
+        Me.Column9.Name = "Column9"
         '
         'Column1
         '
@@ -405,6 +412,11 @@ Partial Class CT_CuentaPorCobrar
         '
         Me.Column5.HeaderText = "Haber"
         Me.Column5.Name = "Column5"
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "codTerminoPago"
+        Me.Column10.Name = "Column10"
         '
         'Column6
         '
@@ -511,11 +523,13 @@ Partial Class CT_CuentaPorCobrar
     Friend WithEvents txtFactura As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents id_DetalleCliente As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewButtonColumn
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
