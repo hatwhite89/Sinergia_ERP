@@ -35,10 +35,12 @@ Partial Class CT_CuentaPorCobrar
         Me.btnSalir = New UIDC.UI_ButtonImage()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtFactura = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.cbxTerminoPa = New System.Windows.Forms.ComboBox()
+        Me.cbxTerminoPago = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtCredito = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -54,6 +56,8 @@ Partial Class CT_CuentaPorCobrar
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDetalleCliente = New System.Windows.Forms.DataGridView()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblmsj = New System.Windows.Forms.ToolStripStatusLabel()
         Me.id_DetalleCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -63,12 +67,9 @@ Partial Class CT_CuentaPorCobrar
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblmsj = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +109,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtNombre
         '
+        Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(386, 31)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(448, 20)
@@ -124,6 +126,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtId
         '
+        Me.txtId.Enabled = False
         Me.txtId.Location = New System.Drawing.Point(180, 31)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(100, 20)
@@ -183,7 +186,7 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox2.Controls.Add(Me.txtFactura)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.cbxTerminoPa)
+        Me.GroupBox2.Controls.Add(Me.cbxTerminoPago)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtCredito)
         Me.GroupBox2.Controls.Add(Me.Label6)
@@ -193,6 +196,7 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.cbxTipoMov)
         Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Enabled = False
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(9, 141)
         Me.GroupBox2.Name = "GroupBox2"
@@ -200,6 +204,23 @@ Partial Class CT_CuentaPorCobrar
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Agregar Movimiento Contable"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(860, 43)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(107, 20)
+        Me.DateTimePicker1.TabIndex = 9
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(857, 27)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(37, 13)
+        Me.Label11.TabIndex = 15
+        Me.Label11.Text = "Fecha"
         '
         'txtFactura
         '
@@ -213,9 +234,9 @@ Partial Class CT_CuentaPorCobrar
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(120, 28)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 13)
+        Me.Label10.Size = New System.Drawing.Size(88, 13)
         Me.Label10.TabIndex = 13
-        Me.Label10.Text = "N# Factura"
+        Me.Label10.Text = "N# Identificación"
         '
         'Button1
         '
@@ -229,14 +250,14 @@ Partial Class CT_CuentaPorCobrar
         Me.Button1.TabIndex = 12
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'cbxTerminoPa
+        'cbxTerminoPago
         '
-        Me.cbxTerminoPa.FormattingEnabled = True
-        Me.cbxTerminoPa.Items.AddRange(New Object() {"15 Días", "30 Días"})
-        Me.cbxTerminoPa.Location = New System.Drawing.Point(733, 43)
-        Me.cbxTerminoPa.Name = "cbxTerminoPa"
-        Me.cbxTerminoPa.Size = New System.Drawing.Size(121, 21)
-        Me.cbxTerminoPa.TabIndex = 11
+        Me.cbxTerminoPago.FormattingEnabled = True
+        Me.cbxTerminoPago.Items.AddRange(New Object() {"15 Días", "30 Días"})
+        Me.cbxTerminoPago.Location = New System.Drawing.Point(733, 43)
+        Me.cbxTerminoPago.Name = "cbxTerminoPago"
+        Me.cbxTerminoPago.Size = New System.Drawing.Size(121, 21)
+        Me.cbxTerminoPago.TabIndex = 11
         '
         'Label7
         '
@@ -253,6 +274,7 @@ Partial Class CT_CuentaPorCobrar
         Me.txtCredito.Name = "txtCredito"
         Me.txtCredito.Size = New System.Drawing.Size(117, 20)
         Me.txtCredito.TabIndex = 9
+        Me.txtCredito.Text = "0.0"
         '
         'Label6
         '
@@ -269,6 +291,7 @@ Partial Class CT_CuentaPorCobrar
         Me.txtDebito.Name = "txtDebito"
         Me.txtDebito.Size = New System.Drawing.Size(117, 20)
         Me.txtDebito.TabIndex = 7
+        Me.txtDebito.Text = "0.0"
         '
         'Label5
         '
@@ -330,10 +353,13 @@ Partial Class CT_CuentaPorCobrar
         '
         'txtSaldo
         '
+        Me.txtSaldo.BackColor = System.Drawing.Color.White
+        Me.txtSaldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSaldo.Location = New System.Drawing.Point(832, 19)
         Me.txtSaldo.Name = "txtSaldo"
         Me.txtSaldo.Size = New System.Drawing.Size(193, 20)
         Me.txtSaldo.TabIndex = 16
+        Me.txtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label9
         '
@@ -367,7 +393,7 @@ Partial Class CT_CuentaPorCobrar
         Me.dgvDetalleCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvDetalleCliente.BackgroundColor = System.Drawing.Color.White
         Me.dgvDetalleCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column10, Me.Column6, Me.Column7, Me.Column8})
+        Me.dgvDetalleCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column10, Me.Column6, Me.Column11, Me.Column7, Me.Column8})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -381,11 +407,26 @@ Partial Class CT_CuentaPorCobrar
         Me.dgvDetalleCliente.Size = New System.Drawing.Size(1021, 249)
         Me.dgvDetalleCliente.TabIndex = 0
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblmsj})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 568)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1051, 22)
+        Me.StatusStrip1.TabIndex = 8
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblmsj
+        '
+        Me.lblmsj.BackColor = System.Drawing.Color.Transparent
+        Me.lblmsj.Name = "lblmsj"
+        Me.lblmsj.Size = New System.Drawing.Size(16, 17)
+        Me.lblmsj.Text = "..."
+        '
         'id_DetalleCliente
         '
         Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
         Me.id_DetalleCliente.Name = "id_DetalleCliente"
-        Me.id_DetalleCliente.Visible = False
         '
         'Column9
         '
@@ -399,7 +440,7 @@ Partial Class CT_CuentaPorCobrar
         '
         'Column2
         '
-        Me.Column2.HeaderText = "N# Fact"
+        Me.Column2.HeaderText = "N# ID"
         Me.Column2.Name = "Column2"
         '
         'Column3
@@ -427,19 +468,23 @@ Partial Class CT_CuentaPorCobrar
         Me.Column6.HeaderText = "Term. Pago"
         Me.Column6.Name = "Column6"
         '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Fecha"
+        Me.Column11.Name = "Column11"
+        '
         'Column7
         '
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.NullValue = False
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray
         Me.Column7.DefaultCellStyle = DataGridViewCellStyle1
-        Me.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Column7.HeaderText = "Pagado"
         Me.Column7.Name = "Column7"
         Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column7.Text = "Pagado"
         '
         'Column8
         '
@@ -447,39 +492,6 @@ Partial Class CT_CuentaPorCobrar
         Me.Column8.Name = "Column8"
         Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblmsj})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 568)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1051, 22)
-        Me.StatusStrip1.TabIndex = 8
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblmsj
-        '
-        Me.lblmsj.BackColor = System.Drawing.Color.Transparent
-        Me.lblmsj.Name = "lblmsj"
-        Me.lblmsj.Size = New System.Drawing.Size(16, 17)
-        Me.lblmsj.Text = "..."
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(857, 27)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(37, 13)
-        Me.Label11.TabIndex = 15
-        Me.Label11.Text = "Fecha"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(860, 43)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(107, 20)
-        Me.DateTimePicker1.TabIndex = 9
         '
         'CT_CuentaPorCobrar
         '
@@ -523,7 +535,7 @@ Partial Class CT_CuentaPorCobrar
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents cbxTerminoPa As ComboBox
+    Friend WithEvents cbxTerminoPago As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtCredito As TextBox
     Friend WithEvents Label6 As Label
@@ -543,6 +555,8 @@ Partial Class CT_CuentaPorCobrar
     Friend WithEvents Label8 As Label
     Friend WithEvents txtFactura As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label11 As Label
     Friend WithEvents id_DetalleCliente As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
@@ -552,8 +566,7 @@ Partial Class CT_CuentaPorCobrar
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewCheckBoxColumn
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label11 As Label
 End Class
