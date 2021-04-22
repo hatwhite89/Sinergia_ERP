@@ -96,7 +96,7 @@
                 sinDobleEspacio(txtNombre.Text)
                 With objDetMov
                     .id_Proveedor_ = Integer.Parse(txtId.Text)
-                    .id_TipoMovimiento_ = 1
+                    .id_TipoMovimiento_ = Integer.Parse(cmbxTipoMovimiento.SelectedValue)
                     .descripcion_ = txtDescripcion.Text
                     If txtDebito.Text = "" Then
                         .debito_ = 0
@@ -108,8 +108,8 @@
                     Else
                         .credito_ = Double.Parse(txtCredito.Text)
                     End If
-                    .credito_ = Double.Parse(txtCredito.Text)
-                    .id_terminoPago_ = cmbxTerminoPago.SelectedValue
+                    '.credito_ = Double.Parse(txtCredito.Text)
+                    .id_terminoPago_ = Integer.Parse(cmbxTerminoPago.SelectedValue)
                     .fecha_ = dtpFecha.Value
                     .pagado_ = 0
                     .anulado_ = 0
@@ -143,11 +143,11 @@
             ElseIf e.ColumnIndex = 10 Then
                 MODIFICAR_DETALLE_PAGO(e.RowIndex)
                 dgvDetalleProveedor.Rows.Clear()
-                CARGAR_DETALLE()
+                'CARGAR_DETALLE()
             ElseIf e.ColumnIndex = 11 Then
                 MODIFICAR_DETALLE(e.RowIndex)
                 dgvDetalleProveedor.Rows.Clear()
-                CARGAR_DETALLE()
+                'CARGAR_DETALLE()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -172,11 +172,12 @@
             If Trim(txtId.Text) <> "" Then
                 Dim objDetMovi As New ClsDetalleMovimientos_Proveedor
                 objDetMovi.id_Proveedor_ = Integer.Parse(txtId.Text)
-                Dim dt As DataTable = objDetMovi.BuscarDetalleMovimientos_Proveedor
+                Dim dt As New DataTable
                 Dim row As DataRow
+                dt = objDetMovi.BuscarDetalleMovimientos_Proveedor
                 For index = 0 To dt.Rows.Count - 1
                     row = dt.Rows(index)
-                    dgvDetalleProveedor.Rows.Insert(0, New String() {CStr(row("id")), CStr(row("TipoMovimiento")), CStr(row("id_TipoMovimiento")), CStr(row("identificador")), CStr(row("descripcion")), CStr(row("debito")), CStr(row("credito")), CStr(row("id_TerminoPago")), CStr(row("TerminoPago")), CStr(row("fecha")), CStr(row("pagado")), CStr(row("anulado"))})
+                    dgvDetalleProveedor.Rows.Insert(0, New String() {CStr(row("id")), row("TipoMovimiento"), row("id_TipoMovimiento"), row("identificador"), row("descripcion"), row("debito"), row("credito"), row("id_TerminoPago"), row("TerminoPago"), row("fecha"), row("pagado"), row("anulado")})
                 Next
                 SUMARHABER()
                 CambioColoresDataGridView()
@@ -273,7 +274,7 @@
         MsgBox("Entra al actualizar")
         Dim objDetMov As New ClsDetalleMovimientos_Proveedor
         With objDetMov
-            .id_ = dgvDetalleProveedor.Rows(fila).Cells(0).Value
+            .id_ = Integer.Parse(dgvDetalleProveedor.Rows(fila).Cells(0).Value)
             .id_Proveedor_ = Integer.Parse(txtId.Text)
             .id_TipoMovimiento_ = dgvDetalleProveedor.Rows(fila).Cells(2).Value
             .descripcion_ = dgvDetalleProveedor.Rows(fila).Cells(4).Value
@@ -284,31 +285,37 @@
             .pagado_ = dgvDetalleProveedor.Rows(fila).Cells(10).Value
             .anulado_ = dgvDetalleProveedor.Rows(fila).Cells(11).Value
             .identificador_ = dgvDetalleProveedor.Rows(fila).Cells(3).Value
-            If .ModificarDetalleMovimientos_Proveedor = 1 Then
-                lblmsj.Text = "Se actualizo el registro exitosamente."
-            End If
-            CARGAR_DETALLE()
+            .ModificarDetalleMovimientos_Proveedor()
+            'If .ModificarDetalleMovimientos_Proveedor = 1 Then
+            '    lblmsj.Text = "Se actualizo el registro exitosamente."
+            'End If
+            ''CARGAR_DETALLE()
         End With
 
     End Sub
     Private Sub MODIFICAR_DETALLE_PAGO(fila As Integer)
+
         MsgBox("Entra al darle check en pagar")
         Dim objDetMov As New ClsDetalleMovimientos_Proveedor
         With objDetMov
-            .id_ = dgvDetalleProveedor.Rows(fila).Cells(0).Value
+            .id_ = Integer.Parse(dgvDetalleProveedor.Rows(fila).Cells(0).Value)
             .id_Proveedor_ = Integer.Parse(txtId.Text)
-            .id_TipoMovimiento_ = dgvDetalleProveedor.Rows(fila).Cells(2).Value
+            .id_TipoMovimiento_ = Integer.Parse(dgvDetalleProveedor.Rows(fila).Cells(2).Value)
             .descripcion_ = dgvDetalleProveedor.Rows(fila).Cells(4).Value
-            If dgvDetalleProveedor.Rows(fila).Cells(10).Value Then
+
+            If dgvDetalleProveedor.Rows(fila).Cells(10).Value = True Then
                 .debito_ = Double.Parse(dgvDetalleProveedor.Rows(fila).Cells(6).Value)
                 .credito_ = Double.Parse(dgvDetalleProveedor.Rows(fila).Cells(5).Value)
             Else
                 .debito_ = Double.Parse(dgvDetalleProveedor.Rows(fila).Cells(6).Value)
                 .credito_ = Double.Parse(dgvDetalleProveedor.Rows(fila).Cells(5).Value)
             End If
+
             .id_terminoPago_ = Integer.Parse(dgvDetalleProveedor.Rows(fila).Cells(7).Value)
             .fecha_ = dgvDetalleProveedor.Rows(fila).Cells(9).Value
+            MsgBox(dgvDetalleProveedor.Rows(fila).Cells(10).Value)
             .pagado_ = dgvDetalleProveedor.Rows(fila).Cells(10).Value
+            MsgBox(dgvDetalleProveedor.Rows(fila).Cells(11).Value)
             .anulado_ = dgvDetalleProveedor.Rows(fila).Cells(11).Value
             .identificador_ = dgvDetalleProveedor.Rows(fila).Cells(3).Value
             'MsgBox(dgvDetalleProveedor.Rows(fila).Cells(9).Value)
@@ -318,7 +325,7 @@
                 'dgvDetalleProveedor.Rows(fila).Cells(5).Value = "0"
                 lblmsj.Text = "Se actualizo el registro exitosamente."
             End If
-            CARGAR_DETALLE()
+            'CARGAR_DETALLE()
         End With
 
     End Sub
