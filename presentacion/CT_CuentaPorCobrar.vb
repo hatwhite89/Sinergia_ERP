@@ -262,7 +262,7 @@
 
 
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
 
 
@@ -284,7 +284,7 @@
             .pagado_ = dgvDetalleCliente.Rows(fila).Cells(10).Value
             .anulado_ = dgvDetalleCliente.Rows(fila).Cells(11).Value
             .ActualizarDetalle()
-            CARGAR_DETALLE()
+            'CARGAR_DETALLE()
             COLOR_PAGADOS()
         End With
 
