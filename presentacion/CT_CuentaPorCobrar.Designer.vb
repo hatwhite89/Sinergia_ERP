@@ -56,8 +56,6 @@ Partial Class CT_CuentaPorCobrar
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDetalleCliente = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblmsj = New System.Windows.Forms.ToolStripStatusLabel()
         Me.id_DetalleCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,6 +68,8 @@ Partial Class CT_CuentaPorCobrar
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblmsj = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -407,31 +407,17 @@ Partial Class CT_CuentaPorCobrar
         Me.dgvDetalleCliente.Size = New System.Drawing.Size(1021, 249)
         Me.dgvDetalleCliente.TabIndex = 0
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblmsj})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 568)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1051, 22)
-        Me.StatusStrip1.TabIndex = 8
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblmsj
-        '
-        Me.lblmsj.BackColor = System.Drawing.Color.Transparent
-        Me.lblmsj.Name = "lblmsj"
-        Me.lblmsj.Size = New System.Drawing.Size(16, 17)
-        Me.lblmsj.Text = "..."
-        '
         'id_DetalleCliente
         '
         Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
         Me.id_DetalleCliente.Name = "id_DetalleCliente"
+        Me.id_DetalleCliente.Visible = False
         '
         'Column9
         '
         Me.Column9.HeaderText = "codMovimiento"
         Me.Column9.Name = "Column9"
+        Me.Column9.Visible = False
         '
         'Column1
         '
@@ -442,6 +428,7 @@ Partial Class CT_CuentaPorCobrar
         '
         Me.Column2.HeaderText = "N# ID"
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
@@ -452,16 +439,19 @@ Partial Class CT_CuentaPorCobrar
         '
         Me.Column4.HeaderText = "Debe"
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
         Me.Column5.HeaderText = "Haber"
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column10
         '
         Me.Column10.HeaderText = "codTerminoPago"
         Me.Column10.Name = "Column10"
+        Me.Column10.Visible = False
         '
         'Column6
         '
@@ -492,6 +482,22 @@ Partial Class CT_CuentaPorCobrar
         Me.Column8.Name = "Column8"
         Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblmsj})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 568)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1051, 22)
+        Me.StatusStrip1.TabIndex = 8
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblmsj
+        '
+        Me.lblmsj.BackColor = System.Drawing.Color.Transparent
+        Me.lblmsj.Name = "lblmsj"
+        Me.lblmsj.Size = New System.Drawing.Size(16, 17)
+        Me.lblmsj.Text = "..."
         '
         'CT_CuentaPorCobrar
         '

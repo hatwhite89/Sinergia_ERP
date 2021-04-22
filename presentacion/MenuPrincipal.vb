@@ -4,7 +4,6 @@
 
     Private Sub llenarContabilidad()
 
-
         dgvOpciones.Rows.Clear()
         dgvOpciones.Columns("Opciones").HeaderText = "Opciones de Contabilidad"
         dgvOpciones.Rows.Add("Crear Cuentas")
@@ -12,6 +11,9 @@
         dgvOpciones.Rows.Add("Cuentas por Cobrar")
         dgvOpciones.Rows.Add("Clientes")
         dgvOpciones.Rows.Add("Tipo de Movimientos")
+        dgvOpciones.Rows.Add("Proveedores")
+        dgvOpciones.Rows.Add("Terminos de Pago")
+        dgvOpciones.Rows.Add("Movimientos Contables")
 
     End Sub
 
@@ -58,12 +60,7 @@
         dgvOpciones.Rows.Add("Modificar Usuarios")
         dgvOpciones.Rows.Add("Modificar Perfiles de Usuarios")
 
-
     End Sub
-
-
-
-
 
     Private Sub UI_ButtonImage1_Click(sender As Object, e As EventArgs) Handles UI_ButtonImage1.Click
         llenarContabilidad()
@@ -139,6 +136,12 @@
             ElseIf SELECCION = "Clientes" Then
                 CT_Clientes.Show()
             ElseIf SELECCION = "Tipo de Movimientos" Then
+                CT_TipoMovimiento.Show()
+            ElseIf SELECCION = "Proveedores" Then
+                CT_Proveedores.Show()
+            ElseIf SELECCION = "Terminos de Pago" Then
+                CT_TerminoPago.Show()
+            ElseIf SELECCION = "Movimientos Contables" Then
                 CT_TipoMovimiento.Show()
             End If
 

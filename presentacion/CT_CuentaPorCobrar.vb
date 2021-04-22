@@ -118,7 +118,7 @@
 
                     If codigo > 0 Then
 
-                        dgvDetalleCliente.Rows.Insert(0, New String() {codigo, cbxTipoMov.SelectedValue, cbxTipoMov.Text, txtFactura.Text, txtDescripcion.Text, txtDebito.Text, txtCredito.Text, cbxTerminoPago.SelectedValue, cbxTerminoPago.Text, DateTimePicker1.Value, "", False})
+                        dgvDetalleCliente.Rows.Insert(0, New String() {codigo, cbxTipoMov.SelectedValue, cbxTipoMov.Text, txtFactura.Text, txtDescripcion.Text, txtDebito.Text, txtCredito.Text, cbxTerminoPago.SelectedValue, cbxTerminoPago.Text, DateTimePicker1.Value, False, False})
                         SUMARDEBE()
                         lblmsj.Text = "Se inserto un movimiento contable correctamente."
 
