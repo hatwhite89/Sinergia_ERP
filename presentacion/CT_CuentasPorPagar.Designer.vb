@@ -32,7 +32,21 @@ Partial Class CT_CuentasPorPagar
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgvDetalleProveedor = New System.Windows.Forms.DataGridView()
+        Me.id_DetalleCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.idTipoMov = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NIdentificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TerminoPagos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pagado = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtIdentificador = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.btnAgregar = New System.Windows.Forms.Button()
@@ -56,16 +70,6 @@ Partial Class CT_CuentasPorPagar
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.id_DetalleCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TerminoPagos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvDetalleProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,7 +165,7 @@ Partial Class CT_CuentasPorPagar
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvDetalleProveedor.BackgroundColor = System.Drawing.Color.White
         Me.dgvDetalleProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.TerminoPagos, Me.Fecha, Me.Column7, Me.Column8})
+        Me.dgvDetalleProveedor.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_DetalleCliente, Me.Column1, Me.idTipoMov, Me.NIdentificacion, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.TerminoPagos, Me.Fecha, Me.Pagado, Me.Column8})
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -177,11 +181,101 @@ Partial Class CT_CuentasPorPagar
         Me.dgvDetalleProveedor.Size = New System.Drawing.Size(1183, 306)
         Me.dgvDetalleProveedor.TabIndex = 0
         '
+        'id_DetalleCliente
+        '
+        Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
+        Me.id_DetalleCliente.MinimumWidth = 6
+        Me.id_DetalleCliente.Name = "id_DetalleCliente"
+        Me.id_DetalleCliente.Visible = False
+        Me.id_DetalleCliente.Width = 125
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Tipo Mov."
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 125
+        '
+        'idTipoMov
+        '
+        Me.idTipoMov.HeaderText = "idTipoMov"
+        Me.idTipoMov.MinimumWidth = 6
+        Me.idTipoMov.Name = "idTipoMov"
+        Me.idTipoMov.Width = 125
+        '
+        'NIdentificacion
+        '
+        Me.NIdentificacion.HeaderText = "N# Identificación"
+        Me.NIdentificacion.MinimumWidth = 6
+        Me.NIdentificacion.Name = "NIdentificacion"
+        Me.NIdentificacion.Width = 125
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Descripción"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 125
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Debe"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 125
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Haber"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 125
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Term. Pago"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.Visible = False
+        Me.Column6.Width = 125
+        '
+        'TerminoPagos
+        '
+        Me.TerminoPagos.HeaderText = "Termino de Pago"
+        Me.TerminoPagos.MinimumWidth = 6
+        Me.TerminoPagos.Name = "TerminoPagos"
+        Me.TerminoPagos.Width = 125
+        '
+        'Fecha
+        '
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.MinimumWidth = 6
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.Width = 125
+        '
+        'Pagado
+        '
+        Me.Pagado.HeaderText = "Pagado"
+        Me.Pagado.MinimumWidth = 6
+        Me.Pagado.Name = "Pagado"
+        Me.Pagado.Width = 125
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Anular"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column8.Width = 125
+        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.txtIdentificador)
+        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.dtpFecha)
         Me.GroupBox2.Controls.Add(Me.btnAgregar)
@@ -204,6 +298,24 @@ Partial Class CT_CuentasPorPagar
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Agregar Movimiento Contable"
+        '
+        'txtIdentificador
+        '
+        Me.txtIdentificador.Location = New System.Drawing.Point(176, 53)
+        Me.txtIdentificador.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIdentificador.Name = "txtIdentificador"
+        Me.txtIdentificador.Size = New System.Drawing.Size(159, 22)
+        Me.txtIdentificador.TabIndex = 16
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(172, 33)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(112, 17)
+        Me.Label11.TabIndex = 15
+        Me.Label11.Text = "N# Identificación"
         '
         'Label10
         '
@@ -239,10 +351,10 @@ Partial Class CT_CuentasPorPagar
         'cmbxTerminoPago
         '
         Me.cmbxTerminoPago.FormattingEnabled = True
-        Me.cmbxTerminoPago.Location = New System.Drawing.Point(816, 52)
+        Me.cmbxTerminoPago.Location = New System.Drawing.Point(838, 52)
         Me.cmbxTerminoPago.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxTerminoPago.Name = "cmbxTerminoPago"
-        Me.cmbxTerminoPago.Size = New System.Drawing.Size(160, 24)
+        Me.cmbxTerminoPago.Size = New System.Drawing.Size(138, 24)
         Me.cmbxTerminoPago.TabIndex = 11
         '
         'Label7
@@ -257,16 +369,16 @@ Partial Class CT_CuentasPorPagar
         '
         'txtCredito
         '
-        Me.txtCredito.Location = New System.Drawing.Point(652, 53)
+        Me.txtCredito.Location = New System.Drawing.Point(702, 52)
         Me.txtCredito.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCredito.Name = "txtCredito"
-        Me.txtCredito.Size = New System.Drawing.Size(155, 22)
+        Me.txtCredito.Size = New System.Drawing.Size(128, 22)
         Me.txtCredito.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(648, 33)
+        Me.Label6.Location = New System.Drawing.Point(709, 31)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 17)
@@ -275,16 +387,16 @@ Partial Class CT_CuentasPorPagar
         '
         'txtDebito
         '
-        Me.txtDebito.Location = New System.Drawing.Point(488, 53)
+        Me.txtDebito.Location = New System.Drawing.Point(563, 53)
         Me.txtDebito.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDebito.Name = "txtDebito"
-        Me.txtDebito.Size = New System.Drawing.Size(155, 22)
+        Me.txtDebito.Size = New System.Drawing.Size(131, 22)
         Me.txtDebito.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(484, 33)
+        Me.Label5.Location = New System.Drawing.Point(570, 31)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 17)
@@ -293,16 +405,16 @@ Partial Class CT_CuentasPorPagar
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(185, 53)
+        Me.txtDescripcion.Location = New System.Drawing.Point(343, 52)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(293, 22)
+        Me.txtDescripcion.Size = New System.Drawing.Size(212, 22)
         Me.txtDescripcion.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(181, 33)
+        Me.Label4.Location = New System.Drawing.Point(353, 33)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 17)
@@ -312,7 +424,7 @@ Partial Class CT_CuentasPorPagar
         'cmbxTipoMovimiento
         '
         Me.cmbxTipoMovimiento.FormattingEnabled = True
-        Me.cmbxTipoMovimiento.Location = New System.Drawing.Point(12, 53)
+        Me.cmbxTipoMovimiento.Location = New System.Drawing.Point(8, 52)
         Me.cmbxTipoMovimiento.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbxTipoMovimiento.Name = "cmbxTipoMovimiento"
         Me.cmbxTipoMovimiento.Size = New System.Drawing.Size(160, 24)
@@ -449,82 +561,6 @@ Partial Class CT_CuentasPorPagar
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Identificador"
         '
-        'id_DetalleCliente
-        '
-        Me.id_DetalleCliente.HeaderText = "id_DetalleCliente"
-        Me.id_DetalleCliente.MinimumWidth = 6
-        Me.id_DetalleCliente.Name = "id_DetalleCliente"
-        Me.id_DetalleCliente.Visible = False
-        Me.id_DetalleCliente.Width = 125
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Tipo Mov."
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 125
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Descripción"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 125
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Debe"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 125
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Haber"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 125
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Term. Pago"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.Visible = False
-        Me.Column6.Width = 125
-        '
-        'TerminoPagos
-        '
-        Me.TerminoPagos.HeaderText = "Termino de Pago"
-        Me.TerminoPagos.MinimumWidth = 6
-        Me.TerminoPagos.Name = "TerminoPagos"
-        Me.TerminoPagos.Width = 125
-        '
-        'Fecha
-        '
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.MinimumWidth = 6
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.Width = 125
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Pagado"
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column7.Width = 125
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Anular"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column8.Width = 125
-        '
         'CT_CuentasPorPagar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -589,14 +625,18 @@ Partial Class CT_CuentasPorPagar
     Friend WithEvents Button2 As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents txtIdentificador As TextBox
+    Friend WithEvents Label11 As Label
     Friend WithEvents id_DetalleCliente As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents idTipoMov As DataGridViewTextBoxColumn
+    Friend WithEvents NIdentificacion As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents TerminoPagos As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents Pagado As DataGridViewCheckBoxColumn
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
 End Class
