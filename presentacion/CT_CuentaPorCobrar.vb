@@ -168,7 +168,6 @@
             llenarMovimientos()
             llenarTerminoPago()
 
-
         Catch ex As Exception
 
         End Try
