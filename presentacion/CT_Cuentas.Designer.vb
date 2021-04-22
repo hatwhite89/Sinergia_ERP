@@ -126,7 +126,7 @@ Partial Class CT_Cuentas
         Me.gbxbusqueda.Size = New System.Drawing.Size(778, 380)
         Me.gbxbusqueda.TabIndex = 127
         Me.gbxbusqueda.TabStop = False
-        Me.gbxbusqueda.Text = "BUSCAR EMPLEADOS"
+        Me.gbxbusqueda.Text = "BUSCAR CUENTA"
         '
         'txtNombreB
         '
