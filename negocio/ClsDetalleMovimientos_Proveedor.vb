@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class ClsDetalleMovimientos_Proveedor
-    Dim descripcion As String
+    Dim descripcion, identificador As String
     Dim fecha As Date
     Dim debito, credito As Double
     Dim id, id_Proveedor, id_TipoMovimiento, id_terminoPago As Integer
@@ -49,6 +49,14 @@ Public Class ClsDetalleMovimientos_Proveedor
         End Get
         Set(value As String)
             descripcion = value
+        End Set
+    End Property
+    Public Property identificador_ As String
+        Get
+            Return identificador
+        End Get
+        Set(value As String)
+            identificador = value
         End Set
     End Property
     Public Property fecha_ As Date
@@ -149,6 +157,11 @@ Public Class ClsDetalleMovimientos_Proveedor
         sqlcom.Parameters.Add(sqlpar)
 
         sqlpar = New SqlParameter
+        sqlpar.ParameterName = "identificador" 'nombre campo en el procedimiento almacenado @
+        sqlpar.Value = identificador_
+        sqlcom.Parameters.Add(sqlpar)
+
+        sqlpar = New SqlParameter
         sqlpar.ParameterName = "salida"
         sqlpar.Value = ""
         sqlcom.Parameters.Add(sqlpar)
@@ -226,6 +239,11 @@ Public Class ClsDetalleMovimientos_Proveedor
         sqlpar = New SqlParameter
         sqlpar.ParameterName = "anulado" 'nombre campo en el procedimiento almacenado @
         sqlpar.Value = anulado_
+        sqlcom.Parameters.Add(sqlpar)
+
+        sqlpar = New SqlParameter
+        sqlpar.ParameterName = "identificador" 'nombre campo en el procedimiento almacenado @
+        sqlpar.Value = identificador_
         sqlcom.Parameters.Add(sqlpar)
 
         sqlpar = New SqlParameter
