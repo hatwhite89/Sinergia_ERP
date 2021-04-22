@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class ClsArea
     Dim nombre As String
     Dim codigo As Integer
