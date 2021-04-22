@@ -1,6 +1,7 @@
 ﻿Public Class CT_CuentasPorPagar
     Dim objTerm As New ClsTerminoPago
     Dim objDetMov As New ClsDetalleMovimientos_Proveedor
+
     Private Sub btnProveedor_Click(sender As Object, e As EventArgs) Handles btnProveedor.Click
         CT_Proveedores.lblForm.Text = "CT_CuentasPorPagar"
         CT_Proveedores.Show()
